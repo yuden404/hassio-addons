@@ -1,6 +1,6 @@
 name: "WAHA WhatsApp"
 description: "WhatsApp HTTP API - Send and receive WhatsApp messages via REST API"
-version: "1.1.0"
+version: "1.2.0"
 slug: "waha"
 init: false
 arch:
@@ -15,3 +15,17 @@ map:
   - data:rw
 homeassistant: "2023.1.0"
 url: https://waha.devlike.pro
+options:
+  api_key: ""
+  dashboard_username: "admin"
+  dashboard_password: ""
+  engine: "WEBJS"
+  log_level: "info"
+  tz: "Asia/Jerusalem"
+schema:
+  api_key: password
+  dashboard_username: str
+  dashboard_password: password
+  engine: list(WEBJS|NOWEB|GOWS)
+  log_level: list(error|warn|info|debug)
+  tz: str
